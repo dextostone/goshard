@@ -9,10 +9,11 @@ import (
 
 //Config will used to save all info needed to initiate a connection
 type Config struct {
-	Username string `json:"username"`
-	Password string `json:"password"`
-	Hostname string `json:"hostname"`
-	Dbname   string `json:"dbname"`
+	Username   string `json:"username"`
+	Password   string `json:"password"`
+	Hostname   string `json:"hostname"`
+	Dbname     string `json:"dbname"`
+	PortNumber int    `json:"port"`
 }
 
 var configObj Config
@@ -32,6 +33,10 @@ func validateConfig(obj Config) error {
 
 	if obj.Dbname == "" {
 		return errors.New("Database name cannot be empty")
+	}
+
+	if obj.PortNumber == 0 {
+		return errors.New("Invalid port 0 passed/ port must be initialised")
 	}
 
 	return nil

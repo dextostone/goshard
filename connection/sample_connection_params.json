@@ -1,0 +1,6 @@
+{
+    "username":"root",
+    "password":"example",
+    "hostname":"localhost",
+    "dbname":"hello"
+}

@@ -2,5 +2,6 @@
     "username":"root",
     "password":"password",
     "hostname":"localhost",
-    "dbname":"test"
+    "dbname":"test",
+    "port": 3306
 }
