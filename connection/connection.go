@@ -20,7 +20,6 @@ func getError(msg string, err error) error {
 // Connection Base type for creating new connections and running queries
 type Connection struct {
 	db  *sql.DB
-	age int
 }
 
 // CreateConnection Function to create new connections
